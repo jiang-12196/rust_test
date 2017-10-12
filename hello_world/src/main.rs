@@ -1,10 +1,31 @@
+use std::mem;
+
+fn analyze_slice(slice: &[i32]) {
+    println!("first element of the slice: {}",slice[0]);
+    println!("first element of the slice: {}",slice[3]);
+    println!("the slice has {} elements", slice.len());
+}
+
+fn slice_print() {
+    let xs: [i32; 5] = [1,2,3,4,5];
+    let ys: [i32; 500] = [0; 500];
+    println!("first element of the slice: {}",xs[0]);
+    println!("second element of the slice: {}",xs[1]);
+    println!("array size : {}", xs.len());
+
+    println!("array occupies {} bytes", mem::size_of_val(&xs));
+
+    analyze_slice(&xs);
+
+    analyze_slice(&ys);
+
+    analyze_slice(&ys[1 .. 4]);
+
+}
+
+
 fn main() {
     println!("Hello, world!");
-    let numbers = vec![34, 50, 100, 65];
-    // let result = largest(&numbers);
-    println!("The largest number is {}", numbers[0]);
-    
-    let numbers = vec![102, 34, 6000, 89, 54, 2, 43, 8];
-    // let result = largest(&numbers);
-    println!("The largest number is {}", numbers[1]);
+    slice_print();
+
 }
