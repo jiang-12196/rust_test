@@ -1,0 +1,16 @@
+[package]
+name = "passwd"
+version = "0.1.0"
+authors = ["jiang12196 <jiang12196@126.com>"]
+
+[dependencies]
+base32 = "0.3.1"
+clap = "2.26.1"
+iswow64 = "0.1.0"
+md5 = "0.3.5"
+oath = "0.10.2"
+winreg = "0.3"
+
+[[bin]]
+name = "super-passwd-cli"
+path = "src/super_password_cli.rs"
