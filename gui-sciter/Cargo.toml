@@ -1,0 +1,7 @@
+[package]
+name = "gui-sciter"
+version = "0.1.0"
+authors = ["jiang12196 <jiang12196@126.com>"]
+
+[dependencies]
+sciter-rs = "0.4.18"
